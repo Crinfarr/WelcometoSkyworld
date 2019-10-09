@@ -2,7 +2,7 @@
     "id": "74516f04-b81f-4724-88bf-3d7f0fc2b622",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_YuB_Jump",
+    "name": "s_YuB_JumpStill",
     "For3D": false,
     "HTile": false,
     "VTile": false,

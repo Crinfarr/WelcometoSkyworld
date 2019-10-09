@@ -14,8 +14,12 @@ switch global.p1c {
 			s_player1, //right
 			s_player1, //up
 			s_player1, //down
-			s_player1] //idle
-		p1doGrav = false; //no gravity
+			s_player1]; //idle
+		p1vars = [
+			undefined,
+			10,
+			0
+		]; //no gravity
 		break;
 	case "YuB" :
 		p1spr = [
@@ -26,6 +30,11 @@ switch global.p1c {
 			s_YuB_idle] //idle
 		p1doGrav = true;
 		break;
+}
+
+//sets doGrav vars
+if (p1vars[2] == 0) {
+	p1doGrav = false;
 }
 
 var mX = kR-kL;

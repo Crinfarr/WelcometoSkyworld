@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0e75eabc-bdf5-4a33-8b7a-35e3580afa4b",
+            "Value": {
+                "id": "3261902e-f0a8-42c9-ad42-0cc608834586",
+                "resourcePath": "sprites\\s_YuB_walkLeft_start\\s_YuB_walkLeft_start.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "109a4f48-0f5d-40e6-8138-8a96efb73bf5",
             "Value": {
                 "id": "978db9a0-c0cf-4fc3-8c5b-4979fba28c13",
@@ -127,6 +135,14 @@
             }
         },
         {
+            "Key": "51060775-c9d8-4dbd-bc72-87dd75ceb7b9",
+            "Value": {
+                "id": "dff46379-3e0f-49a8-be68-03e02b6ecbe0",
+                "resourcePath": "sprites\\s_YuB_JumpLeft\\s_YuB_JumpLeft.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "56349346-69da-476d-9011-94f12d36ee7f",
             "Value": {
                 "id": "d4b5a4a9-08da-47e8-8d3e-ae82ac50365a",
@@ -162,7 +178,7 @@
             "Key": "74516f04-b81f-4724-88bf-3d7f0fc2b622",
             "Value": {
                 "id": "9624bed2-3cbe-4fb3-929d-972465aaf7e7",
-                "resourcePath": "sprites\\s_YuB_Jump\\s_YuB_Jump.yy",
+                "resourcePath": "sprites\\s_YuB_JumpStill\\s_YuB_JumpStill.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -199,6 +215,14 @@
             }
         },
         {
+            "Key": "822be1bf-dfca-4557-92ad-4b073ce51ecc",
+            "Value": {
+                "id": "675a9fb6-ae07-468b-9213-2d71812635d4",
+                "resourcePath": "sprites\\s_YuB_JumpRight\\s_YuB_JumpRight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "84d365c0-b9e8-40d2-a5ff-071761759c1e",
             "Value": {
                 "id": "b653a781-2e08-4387-b477-f8357902af67",
@@ -212,6 +236,14 @@
                 "id": "8847eb70-9c83-48a6-86ca-239405d555e5",
                 "resourcePath": "objects\\o_colliderBlock\\o_colliderBlock.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a42c1863-b40b-4d82-abe7-bd9ae50543f1",
+            "Value": {
+                "id": "3b6edb01-0ecb-4170-9075-c24614892101",
+                "resourcePath": "sprites\\s_YuB_walkLeft_idle\\s_YuB_walkLeft_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
