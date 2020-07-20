@@ -1,6 +1,8 @@
 /// @description handles movement (P1)
 
 //changes stats based on character
+
+
 switch global.p1c {
 	case "menupointer":
 		p1spr = [
@@ -16,7 +18,7 @@ switch global.p1c {
 			null//n/a
 			]; 
 		p1vars = [
-			undefined,//no jumping
+			0,//no jumping
 			0,//no gravity
 			5,//medium speed
 			1,//flight type
@@ -39,10 +41,33 @@ switch global.p1c {
 			];
 		p1vars = [
 			5,//medium jump
-			3,//mid-low gravity
-			2,//low speed, but accelerates
+			0.3,//mid-low gravity
+			0.5,//low speed, but accelerates
 			2,//skate type
 			10//medium max speed
+		];
+	break;
+	case "Waterflame":
+		p1spr = [
+			null,//TODO left
+			null,//TODO right
+			null,//TODO up
+			null,//TODO down
+			s_WF_Idle,//idle
+			null,
+			null,
+			null,
+			null,
+			null,
+			null,
+		];
+		p1vars = [
+			3,//low jump
+			1,//EXTREMEY low gravity
+			3,//average speed
+			1,//classic type
+			10//maxspeed should not matter
+			
 		];
 	break;
 }
@@ -78,17 +103,17 @@ var mX = kR-kL;//move on X? if so, left or right?
 var mY = kD-kU;//move on Y? if so, up or down? ((USED ONLY IN FLIGHT MODE))
 
 if (p1vars[3] != 4) {
-	hsp = mX*p1vars[2];
-	vsp = p1vars[0]+vsp;
+	hsp = mX*(p1vars[2]/2);
+	vsp = (p1vars[1]/10)+vsp;
 }
 else {
-	hsp = p1vars[2]*mX;
-	vsp = p1vars[2]*mY;
+	hsp = (p1vars[2]/2)*mX;
+	vsp = (p1vars[2]/2)*mY;
 }
 
 
-if (place_meeting(x,y+1, o_colliderBlock) and kU and (p1vars[1]>=1)) {//basic jumping
-	vsp = p1vars[1]+mY;
+if (place_meeting(x,y+1, o_colliderBlock) and kU and (p1vars[3] == (1 or 2))) {//basic jumping
+	vsp = mY-p1vars[0];
 }
 
 if (place_meeting(x, y+vsp, o_colliderBlock)) { //vertical collision
@@ -105,10 +130,29 @@ if (place_meeting(x+hsp, y, o_colliderBlock)) { //horizontal collision
 	hsp = 0;
 }
 
-if (hsp >= p1vars[3] and p1vars[3] == 2) { //cap velocity
+if (hsp >= p1vars[4] and p1vars[3] == 2) { //cap velocity
 	hsp = p1vars[3]*mX;
 }
 
+switch(sign(hsp)){
+	case 0:
+		sprite_index = p1spr[4];
+	break;
+	case 1:
+		sprite_index = p1spr[1];
+	break;
+	case -1:
+		sprite_index = p1spr[0];
+	break;
+}
+switch(sign(vsp)) {
+	case 0:
+	break;
+	case 1:
+	break;
+	case -1:
+	break;
+}
 //apply velocity 
 //NEVER EDIT BELOW THIS LINE
 x += hsp;

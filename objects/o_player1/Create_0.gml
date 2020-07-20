@@ -22,7 +22,7 @@ p1vars = [];
 	[0]Jump height
 	[1]Gravity 
 	[2]Move speed
-	[3]Movement style {1:classic | 2:skate | 3:swimming (WIP, TEST ONLY) | 4:flying}
+	[3]Movement style {0:none (WILL NOT MOVE) | 1:classic | 2:skate | 3:swimming (WIP, TEST ONLY) | 4:flying}
 	[4]Max speed
 */
 
@@ -31,7 +31,7 @@ hsp = 0;
 vsp = 0;
 
 //current player character
-global.p1c = "menupointer";
+global.p1c = "Waterflame";
 //global.p1dir = 0; //useless??? idk what it does so im commenting it out
 
 //janky shit
